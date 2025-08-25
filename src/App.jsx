@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import axios from 'axios';
 import { useFormStatus } from 'react-dom';
+import StopTimer from "./components/useRef/StopTimer"
 
 function App() {
   const [response,setResponse]=useState(null)
@@ -36,6 +37,7 @@ function App() {
   }
   }
   return (
+    <div className='flex justify-center items-center flex-col'>
     <div className='bg-gray-300 rounded-3xl flex flex-col justify-center items-center w-[50%] mt-3 mb-4'>
       <h1 className="text-2xl text-teal-400 text-center mt-3 underline">React 19 Form Actions</h1>
       <form action={submitLogin} className='flex flex-col gap-4 items-start bg-sky-700 p-8 mt-2 mb-3'>
@@ -54,6 +56,8 @@ function App() {
           )}
         </div>
       )}
+    </div>
+    <StopTimer />
     </div>
   )
 }
