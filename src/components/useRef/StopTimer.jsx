@@ -47,5 +47,4 @@ useEffect(()=>{
     </div>
   )
 }
-
 export default StopTimer
